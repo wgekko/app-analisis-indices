@@ -14,3 +14,8 @@ el momento del cruce y hasta la fecha actual, mostrando el precio de compra y pr
 y el rendimiento generado por la acción. 
 Un tema no menor toda la información se puede descargar en formato excel. 
 para poder ejecutar al app hay que escribir en la terminal streamlit run app.py o app_optional.py
+
+video demo de la app 
+
+https://github.com/user-attachments/assets/f4c5501b-23e2-4661-b623-78e28e00235e
+
