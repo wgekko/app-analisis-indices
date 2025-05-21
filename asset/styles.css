@@ -1,0 +1,168 @@
+/* Estilos personalizados para Streamlit */
+
+body {
+    background-color: #0b1f3a;
+    color: orange !important;
+    font-family: 'Segoe UI', sans-serif !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: #0b1f3a !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+h1, h2, h3, h4 {
+    color: orange !important;
+}
+
+.stButton > button {
+    background-color: #ff8000 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 0.5em 1.2em !important;
+    font-weight: bold !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.stButton > button:hover {
+    background-color: #ffa94d !important;
+    transform: scale(1.05) !important;
+}
+
+
+/* Animated button with pulse effect */
+.st-key-pulse button {
+    background-color: #1e45c9;
+    border-radius: 10px;
+    padding: 20px 60px;
+    animation: pulse 2s infinite;
+    color:rgb(172, 202, 2)
+}
+
+.st-key-pulse button p {
+    font-size: 25px;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Hover effect for the button */
+.st-key-pulse button:hover {
+    background-color: #06318f; /* Darker green */
+    border: none;
+}
+
+.st-key-pulse button:hover p {
+    color: #06a306; /* Gold color */
+}
+
+/* Override the focus states to prevent default red border */
+.st-key-pulse button:focus {
+    background-color: #063c8d; /* Keep the same as hover */
+    border: none;
+}
+
+/* Apply the same text color during focus states */
+.st-key-pulse button:focus p {
+    color: #9dff00;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+/* Animated button with pulse effect */
+
+.st-key-download button {
+    min-width: 300px;
+    min-height: 60px;
+    display: inline-flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  .st-key-download button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .st-key-download button:hover, 
+  .st-key-download button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  .st-key-download button:hover::before, 
+  .st-key-download button:focus::before {
+    opacity: 1;
+  }
+  
+  .st-key-download button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .st-key-download button:hover::after, 
+  .st-key-download button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
